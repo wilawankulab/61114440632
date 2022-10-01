@@ -1,0 +1,32 @@
+ion-content{
+  --background:#0b44b8;
+  position: relative;
+
+    .card-income{
+      position: absolute;
+      top: 6.5rem;
+      width: 75%;
+      height: 35%;
+      left: 50%;
+      transform: translateX(-50%);
+      background:#fff;
+      border-radius: 0.5rem 0.5rem 0.5rem ;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+
+    }
+
+     .card-expense{
+      margin-top: 60%;
+      position: absolute;
+      top: 11.5rem;
+      width: 75%;
+      height: 35%;
+      left: 50%;
+      transform: translateX(-50%);
+      background:#fff;
+      border-radius: 0.5rem 0.5rem 0.5rem ;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+     }
+
+  }
+

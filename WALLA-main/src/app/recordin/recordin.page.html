@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/tabs/tab2">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+
+    </ion-buttons>
+    <ion-title>RECORD</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="mt-5 ml-4 mr-4" *ngFor="let data of datas">
+    <!-- <li>{{data.amount}}</li>
+      <li>{{data.category}}</li>
+      <li>{{data.payee}}</li>
+      <li>{{data.date}}</li>
+      <li>{{data.type}}</li> -->
+
+    <div class="card border-radius  box-shadow2">
+      <div class="d-flex justify-content-between p-3">
+
+        <div class="d-flex align-items-center">
+          <img *ngIf="data.type === 'income' " src="../../assets/icon/coingreen.png" width="40" height="40" class="mb-3">
+          <img *ngIf="data.type === 'expense' " src="../../assets/icon/coinred.png" width="40" height="40" class="mb-3">
+          <div class="ml-2">
+            <div>
+              <p class="font-18 color-gray text-bold">{{data.payee}} </p>
+            </div>
+            <div>
+              <p class="font-18 color-gray">{{data.category}} </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="mr-2 text-right">
+          <div *ngIf="data.type === 'income' ">
+            <p class="color-green font-18 text-bold">+{{formatNumber(data.amount)}}</p>
+          </div>
+          <div *ngIf="data.type === 'expense' ">
+            <p class="color-red font-18 text-bold">-{{formatNumber(data.amount)}}</p>
+          </div>
+          <div>
+            <p class="font-18 color-gray">{{data.date.split('T')[0]}}</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+  </div>
+</ion-content>

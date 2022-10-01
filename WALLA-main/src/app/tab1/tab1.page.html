@@ -1,0 +1,60 @@
+<ion-content [fullscreen]="true">
+
+  <ion-grid class="card">
+    <ion-grid class="card-wallet">
+
+      <p class="p-3 mt-2 font-30 text-bold text-center ">BALANCE</p>
+
+      <p class="text-center font-28 text-bold d-flex justify-content-center align-items-center">
+        {{formatNumber(balanceIncome +
+        balanceExpense)}} <img class="ml-2" src="../../assets/icon/b.png" width="30" height="30"> </p>
+
+    </ion-grid>
+
+    <div class="h-80 scroll-y">
+      <div class=" mt-3 border box-shadow border-radius-5 " *ngFor="let data of datas;">
+        <div class="d-flex justify-content-between p-3">
+
+          <div class="d-flex align-items-center">
+            <img *ngIf="data.type === 'income' " src="../../assets/icon/coingreen.png" width="40" height="40"
+              class="mb-3">
+            <img *ngIf="data.type === 'expense' " src="../../assets/icon/coinred.png" width="40" height="40" class="mb-3">
+            <div class="ml-2">
+              <div>
+                <p class="font-18 color-gray text-bold">{{data.payee}} </p>
+              </div>
+              <div>
+                <p class="font-18 color-gray">{{data.category}} </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="mr-2 text-right">
+            <div *ngIf="data.type === 'income' ">
+              <p class="color-green font-18 text-bold">+{{formatNumber(data.amount)}}</p>
+            </div>
+            <div *ngIf="data.type === 'expense' ">
+              <p class="color-red font-18 text-bold">-{{formatNumber(data.amount)}}</p>
+            </div>
+            <div>
+              <p class="font-18 color-gray">{{data.date.split('T')[0]}}</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+  </ion-grid>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" routerLink="/record">
+    <ion-fab-button>
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <app-explore-container name="Tab 1 page"></app-explore-container>
+</ion-content>

@@ -1,0 +1,57 @@
+ion-content{
+  --background:#0b44b8;
+  position: relative;
+ ion-icon{
+      font-size:2rem;
+      color: #fff;
+
+    }
+  .header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+
+  ion-button {
+    height: 60px;
+    width:60px;
+
+
+  }
+}
+
+  .card {
+    height : 80%;
+    width: 100%;
+    background:#fff;
+    position: absolute;
+    bottom: 0;
+    border-radius: 1rem 1rem 1rem ;
+    padding: 7rem 3rem;
+
+    .card-wallet{
+      position: absolute;
+      top: -4.5rem;
+      width: 75%;
+      height: 25%;
+      left: 50%;
+      transform: translateX(-50%);
+      background:#fff;
+      border-radius: 1rem 1rem 1rem ;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+
+    }
+
+     .card-record{
+      margin-top: 60%;
+      top: -2.5rem;
+      width: 75%;
+      height: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      background:#fff;
+      border-radius: 1rem 1rem 1rem ;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+     }
+
+  }
+}

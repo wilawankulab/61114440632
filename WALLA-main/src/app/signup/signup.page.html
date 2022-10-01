@@ -1,0 +1,38 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary" routerLink="/login">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/login">Log in</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<div class="alert alert-warning" role="alert" *ngIf="isActive">
+  Please complete the information.
+</div>
+
+<ion-content>
+  <div id="header">
+    <h1>Create your Account</h1>
+    <img src="../../assets/image/money-box.png" />
+  </div>
+
+  <form id="#form">
+    <!-- <app-input placeholder="Name"></app-input>
+    <app-input placeholder="Username"></app-input>
+    <app-input placeholder="Password"></app-input> -->
+    <input [(ngModel)]="username" name="username" placeholder="Username" type="text"
+      class="form-control mb-3 rounded-2">
+    <input [(ngModel)]="password" name="password" placeholder="Password" type="password"
+      class="form-control mb-3 rounded-2">
+    <input [(ngModel)]="name" name="name" placeholder="Name" type="text" class="form-control mb-3 rounded-2">
+    <input [(ngModel)]="phone" name="phone" placeholder="Phone" type="text" class="form-control mb-3 rounded-2">
+    <ion-button expand="block" shape="round" (click)="setValueLogin()">SIGN UP</ion-button>
+  </form>
+
+  <p>By signing up you're agreed to<br> our Terms & Conditions</p>
+</ion-content>

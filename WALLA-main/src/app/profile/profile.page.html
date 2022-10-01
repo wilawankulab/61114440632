@@ -1,0 +1,77 @@
+<ion-content [fullscreen]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button routerLink="/tabs/tab4">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-grid class="main-header">
+    <div align="center">
+      <ion-avatar class="adduser">
+        <img src="../../assets/image/add-user.png" />
+      </ion-avatar>
+    </div>
+  </ion-grid>
+
+
+  <ion-list class="form">
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="../../assets/image/id.png" class="image">
+      </ion-thumbnail>
+      <ion-label stacked>
+        Username  {{datas.username}}
+      </ion-label>
+      <!-- <ion-input [disabled]="isDisbled" [(ngModel)]="text" type="text"></ion-input> -->
+    </ion-item>
+
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="../../assets/image/id-card.png" class="image">
+      </ion-thumbnail>
+      <ion-label stacked>
+        Name {{datas.name}}
+      </ion-label>
+      <!-- <ion-input [disabled]="isDisbled" [(ngModel)]="email" type="email" pattern="[^ @]*@[^ @]*.[^@]*"></ion-input> -->
+    </ion-item>
+
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="../../assets/image/password.png" class="image">
+      </ion-thumbnail>
+      <ion-label stacked>
+        Phone {{datas.phone}}
+      </ion-label>
+      <!-- <ion-input [disabled]="isDisbled" [(ngModel)]="email" type="email" pattern="[^ @]*@[^ @]*.[^@]*"></ion-input> -->
+    </ion-item>
+
+
+    <!-- <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="../../assets/image/password.png" class="image">
+      </ion-thumbnail>
+      <ion-label stacked>
+        Password
+      </ion-label>
+      <ion-input [disabled]="isDisbled" [(ngModel)]="pwd" type="password"></ion-input>
+    </ion-item> -->
+<!-- 
+    <ion-item button="true" id="open-date-input">
+      <ion-thumbnail slot="start">
+        <img src="../../assets/image/schedule.png" class="image">
+      </ion-thumbnail>
+      <ion-label>Date</ion-label>
+      <ion-text slot="end">{{ dateValue }}</ion-text>
+      <ion-popover trigger="open-date-input" show-backdrop="false">
+        <ng-template>
+          <ion-datetime #popoverDatetime presentation="date"
+            (ionChange)="dateValue = formatDate(popoverDatetime.value)"></ion-datetime>
+        </ng-template>
+      </ion-popover>
+    </ion-item> -->
+
+  </ion-list>
+
+</ion-content>

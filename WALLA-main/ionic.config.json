@@ -1,0 +1,7 @@
+{
+  "name": "WALLA",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

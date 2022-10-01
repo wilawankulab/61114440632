@@ -1,0 +1,64 @@
+ion-content {
+  *{
+    font-family: BarlowCondensed;
+    font-weight: bold;
+  }
+  .main-header{
+    height:25vh;
+    width:120%;
+    background:linear-gradient(90deg,var(--ion-color-primary) 0%,var(--ion-color-primary) 100%);
+    box-shadow:0 1px 10px var(--ion-color-light);
+    border-radius: 0 0  50% 50%;
+    margin-left:-4.5vh;
+    margin-top: -5px;
+    div {
+      .adduser{
+        width: 30%;
+        height: 30%;
+        box-shadow: 1px 13px 13px 0px rgba(34, 33, 33, 0.2);
+        border-radius:70px;
+      }
+      transform: translateY(2vh);
+      ion-avatar {
+        width: 15vh;
+        height: 15vh;
+        background:var(--ion-color-white);
+        margin-bottom: 5px;
+        border: 7px solid var(--ion-color-primary);
+      }
+    }
+  }
+  ion-row{
+    margin-top:-60px;
+    ion-col{
+      ion-item {
+        width: 94%;
+        margin: auto;
+        border: 1px solid var(--1on-color-light);
+        box-shadow: 1px var(--1on-color-dart);
+        border-radius:5px;
+      }
+
+    }
+
+
+  }
+
+  .image{
+    width: 100%;
+    height: 100%;
+    box-shadow: 1px 13px 13px 0px rgba(34, 33, 33, 0.07);
+
+    border-radius:70px;
+
+}
+
+
+
+}
+
+
+
+
+
+
